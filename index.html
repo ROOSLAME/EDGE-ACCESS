@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Edge Access — professional betting access for educated bettors.">
+  <title>Edge Access — Better Prices. Better Access.</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-ink: #03111c;
+      --color-panel: #071824;
+      --color-line: #17303d;
+      --color-gold: #d7af62;
+      --color-paper: #f4f4f1;
+      --color-mint: #4bc483;
+      --font-sans: Inter, Arial, sans-serif;
+      --shadow-glow: 0 24px 80px rgba(0, 0, 0, .42);
+      --shadow-card: 0 18px 45px rgba(11, 25, 34, .08);
+    }
+
+    @layer base {
+      body {
+        background: #03111c;
+        color: #e9eef1;
+        font-family: Inter, Arial, sans-serif;
+      }
+    }
+
+    @layer components {
+      .hero-noise {
+        background:
+          radial-gradient(circle at 70% 36%, rgba(27, 77, 94, .20), transparent 31rem),
+          radial-gradient(circle at 12% 0%, rgba(215, 175, 98, .07), transparent 22rem),
+          #03111c;
+      }
+
+      .gold-button {
+        background: linear-gradient(135deg, #e4c57d 0%, #c79a4f 100%);
+        box-shadow: inset 0 1px rgba(255, 255, 255, .28), 0 12px 32px rgba(195, 145, 63, .13);
+      }
+
+      .gold-text {
+        background: linear-gradient(120deg, #e0bd70, #ba8940);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .step-line::before {
+        content: "";
+        position: absolute;
+        left: 12.5%;
+        right: 12.5%;
+        top: 27px;
+        height: 1px;
+        background: #27404c;
+      }
+
+      .bet-grid {
+        background-image:
+          linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+        background-size: 22px 22px;
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      details[open] .faq-plus {
+        transform: rotate(45deg);
+      }
+
+      @media (max-width: 767px) {
+        .step-line::before {
+          display: none;
+        }
+      }
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden antialiased selection:bg-gold selection:text-ink">
+  <svg class="hidden" aria-hidden="true">
+    <symbol id="icon-mark" viewBox="0 0 36 36">
+      <path d="M5 3.5 31.5 14 18.3 18.3 12.8 31 5 3.5Z" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="m7.8 7.2 16.8 7-9.1 2.7-3.7 7.8-4-17.5Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    </symbol>
+    <symbol id="icon-spark" viewBox="0 0 32 32">
+      <path d="M16 2v7M16 23v7M2 16h7M23 16h7M6.1 6.1l5 5M20.9 20.9l5 5M25.9 6.1l-5 5M11.1 20.9l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="16" cy="16" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+    </symbol>
+    <symbol id="icon-trophy" viewBox="0 0 32 32">
+      <path d="M10 5h12v5c0 5-2.7 8-6 8s-6-3-6-8V5Zm6 13v5m-5 4h10M13 23h6M10 8H5v2c0 4 2 6 6 6M22 8h5v2c0 4-2 6-6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-user" viewBox="0 0 32 32">
+      <circle cx="16" cy="10" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <path d="M6 28c.7-6.3 4-9.5 10-9.5S25.3 21.7 26 28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-bag" viewBox="0 0 32 32">
+      <path d="M7 11h18l-1.5 16h-15L7 11Zm5 0V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+      <path d="M13 17h6M16 14v6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-shield" viewBox="0 0 32 32">
+      <path d="M16 3 26 7v7c0 7-3.5 11.5-10 15-6.5-3.5-10-8-10-15V7l10-4Z" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      <path d="m11.5 16 3 3 6-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-diamond" viewBox="0 0 32 32">
+      <path d="m5 11 5-6h12l5 6-11 16L5 11Zm0 0h22M10 5l6 22L22 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-support" viewBox="0 0 32 32">
+      <path d="M6 18v-3a10 10 0 0 1 20 0v3M6 17H3v7h5v-7H6Zm20 0h3v7h-5v-7h2Zm-1 7c-1 3-3.5 4-7 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-limit" viewBox="0 0 32 32">
+      <path d="M5 27h22M8 27V13l8-8 8 8v14M13 27v-8h6v8M12 13h8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <header class="absolute inset-x-0 top-0 z-50 border-b border-white/[.06]">
+    <div class="mx-auto flex h-[82px] max-w-[1240px] items-center justify-between px-5 sm:px-8">
+      <a href="#" class="flex items-center gap-2.5 text-white" aria-label="Edge Access home">
+        <svg class="h-7 w-7 text-gold"><use href="#icon-mark"></use></svg>
+        <span class="text-[15px] font-semibold tracking-[.08em]">EDGE <span class="font-normal text-white/70">ACCESS</span></span>
+      </a>
+
+      <nav class="hidden items-center gap-9 text-[12px] font-medium text-white/70 md:flex">
+        <a class="transition hover:text-white" href="#how">How It Works</a>
+        <a class="transition hover:text-white" href="#pricing">Pricing Access</a>
+        <a class="transition hover:text-white" href="#about">About</a>
+        <a class="transition hover:text-white" href="#resources">Resources</a>
+      </nav>
+
+      <div class="hidden items-center gap-7 md:flex">
+        <a href="#" class="text-[12px] font-medium text-white/70 transition hover:text-white">Log In</a>
+        <a href="#get-started" class="gold-button rounded-sm px-6 py-3 text-[10px] font-bold tracking-[.08em] text-ink transition hover:brightness-110">GET STARTED</a>
+      </div>
+
+      <button id="menuButton" class="grid h-10 w-10 place-items-center rounded border border-white/15 md:hidden" aria-label="Open menu" aria-expanded="false">
+        <span class="space-y-1.5">
+          <span class="block h-px w-5 bg-white"></span>
+          <span class="block h-px w-5 bg-white"></span>
+          <span class="block h-px w-5 bg-white"></span>
+        </span>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden border-t border-white/10 bg-ink/95 px-5 py-5 backdrop-blur md:hidden">
+      <nav class="flex flex-col gap-4 text-sm text-white/75">
+        <a href="#how">How It Works</a>
+        <a href="#pricing">Pricing Access</a>
+        <a href="#about">About</a>
+        <a href="#resources">Resources</a>
+        <a href="#get-started" class="mt-2 w-fit rounded-sm bg-gold px-5 py-3 text-xs font-bold text-ink">GET STARTED</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-noise relative overflow-hidden border-b border-white/[.06] pt-[82px]">
+      <div class="pointer-events-none absolute inset-0 opacity-40 bet-grid"></div>
+      <div class="relative mx-auto grid min-h-[600px] max-w-[1240px] items-center gap-16 px-5 py-20 sm:px-8 lg:grid-cols-[.95fr_1.05fr] lg:py-24">
+        <div class="relative z-10 max-w-xl">
+          <p class="mb-5 text-[11px] font-semibold tracking-[.16em] text-gold">PROFESSIONAL BETTING ACCESS</p>
+          <h1 class="text-[46px] font-semibold leading-[1.02] tracking-[-.045em] text-white sm:text-[64px]">
+            Better prices.<br>
+            Better access.<br>
+            <span class="gold-text">Better results.</span>
+          </h1>
+          <p class="mt-7 max-w-[490px] text-[16px] leading-7 text-white/65">
+            We help educated bettors access some of the best pricing and sportsbook accounts in the world.
+          </p>
+          <div class="mt-9 flex flex-wrap items-center gap-7">
+            <a href="#get-started" class="gold-button rounded-sm px-8 py-4 text-[11px] font-bold tracking-[.08em] text-ink transition hover:-translate-y-0.5 hover:brightness-110">GET STARTED</a>
+            <a href="#about" class="group text-[11px] font-bold tracking-[.08em] text-white/80">
+              LEARN MORE <span class="ml-1.5 inline-block transition group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="relative hidden h-[430px] lg:block">
+          <div class="absolute left-14 top-4 h-[368px] w-[430px] rotate-[2.5deg] rounded-xl border border-white/[.06] bg-[#061521]/60 opacity-60"></div>
+          <div class="absolute left-0 top-0 w-[440px] rounded-xl border border-white/[.08] bg-[#061520]/95 p-5 shadow-glow">
+            <div class="mb-5 flex items-center justify-between">
+              <div>
+                <p class="text-[9px] uppercase tracking-[.15em] text-white/30">Line Shopping</p>
+                <p class="mt-1 text-sm font-medium text-white/85">11:20</p>
+              </div>
+              <div class="rounded border border-mint/20 bg-mint/10 px-2.5 py-1 text-[9px] font-medium text-mint">LIVE</div>
+            </div>
+
+            <div class="rounded-lg border border-white/[.06] bg-[#091b27] p-4">
+              <div class="mb-3 flex justify-between text-[9px] uppercase tracking-wider text-white/35">
+                <span>Sportsbook</span><span>Price</span>
+              </div>
+              <div class="space-y-2.5 text-[11px]">
+                <div class="flex items-center justify-between rounded bg-white/[.025] px-3 py-2.5">
+                  <span class="flex items-center gap-2.5 text-white/70"><span class="grid h-5 w-5 place-items-center rounded-full bg-[#143225] text-[8px] text-mint">EA</span> Edge Access</span>
+                  <span class="font-semibold text-mint">-110</span>
+                </div>
+                <div class="flex items-center justify-between px-3 py-1.5 text-white/55">
+                  <span class="flex items-center gap-2.5"><span class="grid h-5 w-5 place-items-center rounded-full bg-white/5 text-[8px]">A</span> Book A</span><span>-105</span>
+                </div>
+                <div class="flex items-center justify-between px-3 py-1.5 text-white/55">
+                  <span class="flex items-center gap-2.5"><span class="grid h-5 w-5 place-items-center rounded-full bg-white/5 text-[8px]">B</span> Book B</span><span>-102</span>
+                </div>
+                <div class="flex items-center justify-between px-3 py-1.5 text-white/55">
+                  <span class="flex items-center gap-2.5"><span class="grid h-5 w-5 place-items-center rounded-full bg-white/5 text-[8px]">C</span> Book C</span><span>-101</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-3 grid grid-cols-2 gap-3">
+              <div class="rounded-lg border border-white/[.06] bg-[#091b27] p-4">
+                <p class="text-[9px] uppercase tracking-wider text-white/35">CLV Tracker</p>
+                <p class="mt-2 text-2xl font-medium text-mint">+2.45%</p>
+                <div class="mt-3 h-1 overflow-hidden rounded-full bg-white/5"><div class="h-full w-[74%] bg-gradient-to-r from-mint to-gold"></div></div>
+                <p class="mt-1.5 text-[8px] text-mint/60">Last 30 days</p>
+              </div>
+              <div class="rounded-lg border border-white/[.06] bg-[#091b27] p-4">
+                <p class="text-[9px] uppercase tracking-wider text-white/35">Win Rate</p>
+                <p class="mt-2 text-2xl font-medium text-mint">61.3%</p>
+                <div class="mt-3 h-1 overflow-hidden rounded-full bg-white/5"><div class="h-full w-[61%] bg-gradient-to-r from-mint to-gold"></div></div>
+                <p class="mt-1.5 text-[8px] text-mint/60">Last 30 days</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative border-t border-white/[.06] bg-black/10">
+        <div class="mx-auto max-w-[1120px] px-5 py-6 sm:px-8">
+          <p class="mb-5 text-center text-[9px] text-white/30">Trusted relationships with industry leading sportsbooks</p>
+          <div class="grid grid-cols-3 items-center gap-5 text-center text-[12px] font-semibold tracking-[.05em] text-white/35 sm:grid-cols-5 sm:text-[14px]">
+            <span>◈ FANDUEL</span>
+            <span>DRAFTKINGS</span>
+            <span>BETMGM</span>
+            <span>CAESARS</span>
+            <span class="col-start-2 sm:col-auto">UNIBET</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="bg-paper py-20 text-ink sm:py-24">
+      <div class="mx-auto max-w-[1120px] px-5 sm:px-8">
+        <div class="mx-auto max-w-xl text-center">
+          <p class="text-[11px] font-semibold tracking-[.14em] text-[#a17b38]">THE EDGE ADVANTAGE</p>
+          <h2 class="mt-3 text-3xl font-semibold tracking-[-.035em] sm:text-[38px]">How We Help You Win</h2>
+          <p class="mt-4 text-sm leading-6 text-slate-600">We combine professional relationships, market intelligence, and account support to give you an edge where it matters most.</p>
+        </div>
+
+        <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="group">
+            <div class="mb-5 grid h-11 w-11 place-items-center rounded-full border border-gold/40 text-[#a17b38] transition group-hover:bg-gold group-hover:text-white">
+              <svg class="h-6 w-6"><use href="#icon-spark"></use></svg>
+            </div>
+            <h3 class="text-sm font-semibold">Better Prices</h3>
+            <p class="mt-2 text-[13px] leading-5 text-slate-600">Access lower juice and better lines across multiple sportsbooks.</p>
+          </article>
+          <article class="group">
+            <div class="mb-5 grid h-11 w-11 place-items-center rounded-full border border-gold/40 text-[#a17b38] transition group-hover:bg-gold group-hover:text-white">
+              <svg class="h-6 w-6"><use href="#icon-trophy"></use></svg>
+            </div>
+            <h3 class="text-sm font-semibold">Premium Access</h3>
+            <p class="mt-2 text-[13px] leading-5 text-slate-600">Get approved for top-tier accounts and increased limits.</p>
+          </article>
+          <article class="group">
+            <div class="mb-5 grid h-11 w-11 place-items-center rounded-full border border-gold/40 text-[#a17b38] transition group-hover:bg-gold group-hover:text-white">
+              <svg class="h-6 w-6"><use href="#icon-user"></use></svg>
+            </div>
+            <h3 class="text-sm font-semibold">Expert Support</h3>
+            <p class="mt-2 text-[13px] leading-5 text-slate-600">Work with a team that understands sharp betting.</p>
+          </article>
+          <article class="group">
+            <div class="mb-5 grid h-11 w-11 place-items-center rounded-full border border-gold/40 text-[#a17b38] transition group-hover:bg-gold group-hover:text-white">
+              <svg class="h-6 w-6"><use href="#icon-bag"></use></svg>
+            </div>
+            <h3 class="text-sm font-semibold">Save Time</h3>
+            <p class="mt-2 text-[13px] leading-5 text-slate-600">We do the heavy lifting so you can focus on betting.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="border-y border-white/[.06] bg-ink py-20 sm:py-24">
+      <div class="mx-auto max-w-[1120px] px-5 sm:px-8">
+        <div class="text-center">
+          <h2 class="text-3xl font-semibold tracking-[-.035em] sm:text-[38px]">How It Works</h2>
+          <p class="mt-3 text-sm text-white/55">A simple process. Professional results.</p>
+        </div>
+
+        <div class="step-line relative mt-12 grid gap-8 md:grid-cols-4 md:gap-5">
+          <article class="relative text-center">
+            <span class="relative z-10 mx-auto grid h-[55px] w-[55px] place-items-center rounded-full border border-gold/60 bg-ink text-base font-medium text-gold">1</span>
+            <h3 class="mt-6 text-sm font-semibold">Tell Us About You</h3>
+            <p class="mx-auto mt-3 max-w-[190px] text-[12px] leading-5 text-white/50">Answer a few questions about your betting experience and goals.</p>
+          </article>
+          <article class="relative text-center">
+            <span class="relative z-10 mx-auto grid h-[55px] w-[55px] place-items-center rounded-full border border-gold/60 bg-ink text-base font-medium text-gold">2</span>
+            <h3 class="mt-6 text-sm font-semibold">Get Matched</h3>
+            <p class="mx-auto mt-3 max-w-[190px] text-[12px] leading-5 text-white/50">We match you with the best sportsbooks and pricing.</p>
+          </article>
+          <article class="relative text-center">
+            <span class="relative z-10 mx-auto grid h-[55px] w-[55px] place-items-center rounded-full border border-gold/60 bg-ink text-base font-medium text-gold">3</span>
+            <h3 class="mt-6 text-sm font-semibold">Get Access</h3>
+            <p class="mx-auto mt-3 max-w-[190px] text-[12px] leading-5 text-white/50">We handle the approvals and account setup.</p>
+          </article>
+          <article class="relative text-center">
+            <span class="relative z-10 mx-auto grid h-[55px] w-[55px] place-items-center rounded-full border border-gold/60 bg-ink text-base font-medium text-gold">4</span>
+            <h3 class="mt-6 text-sm font-semibold">Bet With Confidence</h3>
+            <p class="mx-auto mt-3 max-w-[190px] text-[12px] leading-5 text-white/50">Start betting with better prices and better value.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="bg-[#f7f7f5] py-20 text-ink sm:py-24">
+      <div class="mx-auto max-w-[1120px] px-5 sm:px-8">
+        <div class="grid gap-10 lg:grid-cols-[280px_1fr]">
+          <div>
+            <p class="text-[11px] font-semibold tracking-[.14em] text-[#a17b38]">BUILT FOR BETTORS</p>
+            <h2 class="mt-3 text-3xl font-semibold leading-tight tracking-[-.035em]">Why Bettors<br>Choose Edge Access</h2>
+            <p class="mt-4 text-[13px] leading-6 text-slate-600">We're built for bettors who take their bankroll and results seriously.</p>
+          </div>
+
+          <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <article class="rounded-md border border-slate-200/80 bg-white p-5 shadow-card">
+              <svg class="h-6 w-6 text-[#a17b38]"><use href="#icon-shield"></use></svg>
+              <h3 class="mt-5 text-[13px] font-semibold">Lower Juice</h3>
+              <p class="mt-2 text-[12px] leading-5 text-slate-500">Keep more of your winnings.</p>
+            </article>
+            <article class="rounded-md border border-slate-200/80 bg-white p-5 shadow-card">
+              <svg class="h-6 w-6 text-[#a17b38]"><use href="#icon-limit"></use></svg>
+              <h3 class="mt-5 text-[13px] font-semibold">Better Limits</h3>
+              <p class="mt-2 text-[12px] leading-5 text-slate-500">Higher limits with trusted books.</p>
+            </article>
+            <article class="rounded-md border border-slate-200/80 bg-white p-5 shadow-card">
+              <svg class="h-6 w-6 text-[#a17b38]"><use href="#icon-diamond"></use></svg>
+              <h3 class="mt-5 text-[13px] font-semibold">Exclusive Offers</h3>
+              <p class="mt-2 text-[12px] leading-5 text-slate-500">Promos and deals you can't find publicly.</p>
+            </article>
+            <article class="rounded-md border border-slate-200/80 bg-white p-5 shadow-card">
+              <svg class="h-6 w-6 text-[#a17b38]"><use href="#icon-support"></use></svg>
+              <h3 class="mt-5 text-[13px] font-semibold">Ongoing Support</h3>
+              <p class="mt-2 text-[12px] leading-5 text-slate-500">Real people. Real answers. Real fast.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resources" class="bg-[#f7f7f5] pb-24 text-ink">
+      <div class="mx-auto grid max-w-[1120px] gap-10 border-t border-slate-200 px-5 pt-16 sm:px-8 lg:grid-cols-[280px_1fr]">
+        <div>
+          <p class="text-[11px] font-semibold tracking-[.14em] text-[#a17b38]">NEED TO KNOW</p>
+          <h2 class="mt-3 text-3xl font-semibold tracking-[-.035em]">FAQ</h2>
+          <p class="mt-3 text-[13px] text-slate-600">Answers to common questions.</p>
+        </div>
+
+        <div class="divide-y divide-slate-200 border-y border-slate-200">
+          <details class="group" open>
+            <summary class="flex cursor-pointer list-none items-center justify-between py-5 text-[13px] font-medium">
+              Who is Edge Access for?
+              <span class="faq-plus ml-4 text-lg font-light text-slate-400 transition-transform">+</span>
+            </summary>
+            <p class="max-w-2xl pb-5 pr-8 text-[12px] leading-5 text-slate-500">Serious, experienced bettors looking for stronger pricing, higher limits, and professional account support.</p>
+          </details>
+          <details>
+            <summary class="flex cursor-pointer list-none items-center justify-between py-5 text-[13px] font-medium">
+              How does pricing access work?
+              <span class="faq-plus ml-4 text-lg font-light text-slate-400 transition-transform">+</span>
+            </summary>
+            <p class="max-w-2xl pb-5 pr-8 text-[12px] leading-5 text-slate-500">We learn how you bet, then connect you with suitable books and accounts based on your needs.</p>
+          </details>
+          <details>
+            <summary class="flex cursor-pointer list-none items-center justify-between py-5 text-[13px] font-medium">
+              What sportsbooks do you work with?
+              <span class="faq-plus ml-4 text-lg font-light text-slate-400 transition-transform">+</span>
+            </summary>
+            <p class="max-w-2xl pb-5 pr-8 text-[12px] leading-5 text-slate-500">Our network includes trusted operators across multiple markets. Availability varies by location.</p>
+          </details>
+          <details>
+            <summary class="flex cursor-pointer list-none items-center justify-between py-5 text-[13px] font-medium">
+              How much does it cost?
+              <span class="faq-plus ml-4 text-lg font-light text-slate-400 transition-transform">+</span>
+            </summary>
+            <p class="max-w-2xl pb-5 pr-8 text-[12px] leading-5 text-slate-500">Pricing depends on the access and support you need. Contact us for a tailored recommendation.</p>
+          </details>
+          <details>
+            <summary class="flex cursor-pointer list-none items-center justify-between py-5 text-[13px] font-medium">
+              Do you guarantee better prices?
+              <span class="faq-plus ml-4 text-lg font-light text-slate-400 transition-transform">+</span>
+            </summary>
+            <p class="max-w-2xl pb-5 pr-8 text-[12px] leading-5 text-slate-500">No betting outcome is guaranteed, but we help you find competitive lines and make better-informed decisions.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="get-started" class="border-y border-white/[.06] bg-[#071824]">
+      <div class="mx-auto flex max-w-[1120px] flex-col items-start justify-between gap-7 px-5 py-10 sm:flex-row sm:items-center sm:px-8">
+        <div>
+          <p class="text-[10px] font-semibold tracking-[.15em] text-gold">READY WHEN YOU ARE</p>
+          <h2 class="mt-2 text-xl font-semibold">Ready to Get Better Prices?</h2>
+        </div>
+        <a href="mailto:hello@edgeaccess.com" class="gold-button rounded-sm px-8 py-4 text-[11px] font-bold tracking-[.08em] text-ink transition hover:brightness-110">GET STARTED</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink">
+    <div class="mx-auto max-w-[1120px] px-5 py-14 sm:px-8">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1.4fr]">
+        <div>
+          <a href="#" class="flex items-center gap-2.5 text-white">
+            <svg class="h-7 w-7 text-gold"><use href="#icon-mark"></use></svg>
+            <span class="text-[14px] font-semibold tracking-[.08em]">EDGE <span class="font-normal text-white/60">ACCESS</span></span>
+          </a>
+          <p class="mt-5 max-w-[190px] text-[11px] leading-5 text-white/40">Professional betting access for educated, serious sports bettors.</p>
+        </div>
+        <div>
+          <p class="text-[9px] font-semibold tracking-[.12em] text-white/80">COMPANY</p>
+          <div class="mt-4 space-y-2.5 text-[10px] text-white/40">
+            <a class="block hover:text-white" href="#about">About Us</a>
+            <a class="block hover:text-white" href="#">Contact</a>
+            <a class="block hover:text-white" href="#">Careers</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-[9px] font-semibold tracking-[.12em] text-white/80">RESOURCES</p>
+          <div class="mt-4 space-y-2.5 text-[10px] text-white/40">
+            <a class="block hover:text-white" href="#pricing">Pricing Access</a>
+            <a class="block hover:text-white" href="#">Guides</a>
+            <a class="block hover:text-white" href="#resources">FAQ</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-[9px] font-semibold tracking-[.12em] text-white/80">LEGAL</p>
+          <div class="mt-4 space-y-2.5 text-[10px] text-white/40">
+            <a class="block hover:text-white" href="#">Terms of Service</a>
+            <a class="block hover:text-white" href="#">Privacy Policy</a>
+            <a class="block hover:text-white" href="#">Responsible Gaming</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm font-semibold">Ready to Get Better Prices?</p>
+          <p class="mt-3 text-[11px] leading-5 text-white/40">Join sharp bettors who trust Edge Access.</p>
+          <a href="mailto:hello@edgeaccess.com" class="gold-button mt-5 inline-block rounded-sm px-7 py-3.5 text-[10px] font-bold tracking-[.08em] text-ink">GET STARTED</a>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col gap-5 border-t border-white/[.06] pt-6 text-[9px] text-white/30 sm:flex-row sm:items-center sm:justify-between">
+        <p>© 2026 Edge Access. All rights reserved.</p>
+        <div class="flex gap-4 text-xs">
+          <a href="#" aria-label="Twitter" class="hover:text-gold">𝕏</a>
+          <a href="#" aria-label="Instagram" class="hover:text-gold">◎</a>
+          <a href="#" aria-label="LinkedIn" class="hover:text-gold">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        menuButton.setAttribute("aria-expanded", "false");
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  </script>
+</body>
+</html>
