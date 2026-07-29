@@ -68,10 +68,6 @@
         display: none;
       }
 
-      details[open] .faq-plus {
-        transform: rotate(45deg);
-      }
-
       @media (max-width: 767px) {
         .step-line::before {
           display: none;
@@ -348,50 +344,126 @@
       </div>
     </section>
 
-    <section id="resources" class="bg-[#f7f7f5] pb-24 text-ink">
-      <div class="mx-auto grid max-w-[1120px] gap-10 border-t border-slate-200 px-5 pt-16 sm:px-8 lg:grid-cols-[280px_1fr]">
+    <section id="resources" class="bg-[#f7f7f5] pb-20 text-[#171923] sm:pb-24">
+      <div class="mx-auto grid max-w-[1120px] items-start gap-10 border-t border-slate-200 px-5 pt-16 sm:px-8 lg:grid-cols-[280px_1fr]">
         <div>
           <p class="text-[11px] font-semibold tracking-[.14em] text-[#a17b38]">NEED TO KNOW</p>
-          <h2 class="mt-3 text-3xl font-semibold tracking-[-.035em]">FAQ</h2>
-          <p class="mt-3 text-[13px] text-slate-600">Answers to common questions.</p>
+          <h2 class="mt-2 text-2xl font-semibold tracking-[-.035em]">FAQ</h2>
+          <p class="mt-2 text-[13px] text-slate-500">Answers to common questions.</p>
         </div>
 
-        <div class="divide-y divide-slate-200 border-y border-slate-200">
-          <details class="group" open>
-            <summary class="flex cursor-pointer list-none items-center justify-between py-5 text-[13px] font-medium">
-              Who is Edge Access for?
-              <span class="faq-plus ml-4 text-lg font-light text-slate-400 transition-transform">+</span>
-            </summary>
-            <p class="max-w-2xl pb-5 pr-8 text-[12px] leading-5 text-slate-500">Serious, experienced bettors looking for stronger pricing, higher limits, and professional account support.</p>
-          </details>
-          <details>
-            <summary class="flex cursor-pointer list-none items-center justify-between py-5 text-[13px] font-medium">
-              How does pricing access work?
-              <span class="faq-plus ml-4 text-lg font-light text-slate-400 transition-transform">+</span>
-            </summary>
-            <p class="max-w-2xl pb-5 pr-8 text-[12px] leading-5 text-slate-500">We learn how you bet, then connect you with suitable books and accounts based on your needs.</p>
-          </details>
-          <details>
-            <summary class="flex cursor-pointer list-none items-center justify-between py-5 text-[13px] font-medium">
-              What sportsbooks do you work with?
-              <span class="faq-plus ml-4 text-lg font-light text-slate-400 transition-transform">+</span>
-            </summary>
-            <p class="max-w-2xl pb-5 pr-8 text-[12px] leading-5 text-slate-500">Our network includes trusted operators across multiple markets. Availability varies by location.</p>
-          </details>
-          <details>
-            <summary class="flex cursor-pointer list-none items-center justify-between py-5 text-[13px] font-medium">
-              How much does it cost?
-              <span class="faq-plus ml-4 text-lg font-light text-slate-400 transition-transform">+</span>
-            </summary>
-            <p class="max-w-2xl pb-5 pr-8 text-[12px] leading-5 text-slate-500">Pricing depends on the access and support you need. Contact us for a tailored recommendation.</p>
-          </details>
-          <details>
-            <summary class="flex cursor-pointer list-none items-center justify-between py-5 text-[13px] font-medium">
-              Do you guarantee better prices?
-              <span class="faq-plus ml-4 text-lg font-light text-slate-400 transition-transform">+</span>
-            </summary>
-            <p class="max-w-2xl pb-5 pr-8 text-[12px] leading-5 text-slate-500">No betting outcome is guaranteed, but we help you find competitive lines and make better-informed decisions.</p>
-          </details>
+        <div class="space-y-5">
+        <details class="group overflow-hidden rounded-[18px] border border-[#dededb] bg-white transition duration-300 open:shadow-[0_12px_30px_rgba(15,23,42,.07)] hover:border-slate-300 hover:shadow-[0_10px_24px_rgba(15,23,42,.05)]">
+          <summary class="grid min-h-[132px] cursor-pointer list-none grid-cols-[48px_1fr_20px] items-center gap-x-4 px-6 py-6 sm:grid-cols-[48px_1fr_24px] sm:gap-x-5 sm:px-8">
+            <span class="grid h-12 w-12 place-items-center rounded-[10px] bg-purple-100 text-purple-600">
+              <i data-lucide="briefcase" class="h-6 w-6" aria-hidden="true"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-[17px] font-semibold leading-6 tracking-[-.015em] sm:text-xl">Premium Pre-Negotiated Deals</span>
+              <span class="mt-3 block text-sm leading-6 text-slate-500 sm:text-base">Access exclusive rates normally reserved for super affiliates</span>
+            </span>
+            <i data-lucide="chevron-down" class="h-5 w-5 text-slate-400 transition-transform duration-300 group-open:rotate-180" aria-hidden="true"></i>
+          </summary>
+          <div class="border-t border-slate-100 px-6 pb-7 pt-5 text-sm leading-6 text-slate-500 sm:pl-[100px] sm:pr-16">
+            Get access to stronger commercial terms through established partner relationships.
+          </div>
+        </details>
+
+        <details class="group overflow-hidden rounded-[18px] border border-[#dededb] bg-white transition duration-300 open:shadow-[0_12px_30px_rgba(15,23,42,.07)] hover:border-slate-300 hover:shadow-[0_10px_24px_rgba(15,23,42,.05)]">
+          <summary class="grid min-h-[132px] cursor-pointer list-none grid-cols-[48px_1fr_20px] items-center gap-x-4 px-6 py-6 sm:grid-cols-[48px_1fr_24px] sm:gap-x-5 sm:px-8">
+            <span class="grid h-12 w-12 place-items-center rounded-[10px] bg-amber-100 text-amber-500">
+              <i data-lucide="zap" class="h-6 w-6" aria-hidden="true"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-[17px] font-semibold leading-6 tracking-[-.015em] sm:text-xl">Dynamic Offer Walls</span>
+              <span class="mt-3 block text-sm leading-6 text-slate-500 sm:text-base">AI-powered offer optimization that maximizes every click</span>
+            </span>
+            <i data-lucide="chevron-down" class="h-5 w-5 text-slate-400 transition-transform duration-300 group-open:rotate-180" aria-hidden="true"></i>
+          </summary>
+          <div class="border-t border-slate-100 px-6 pb-7 pt-5 text-sm leading-6 text-slate-500 sm:pl-[100px] sm:pr-16">
+            Offers automatically adapt to audience signals, availability, and performance.
+          </div>
+        </details>
+
+        <details class="group overflow-hidden rounded-[18px] border border-[#dededb] bg-white transition duration-300 open:shadow-[0_12px_30px_rgba(15,23,42,.07)] hover:border-slate-300 hover:shadow-[0_10px_24px_rgba(15,23,42,.05)]">
+          <summary class="grid min-h-[132px] cursor-pointer list-none grid-cols-[48px_1fr_20px] items-center gap-x-4 px-6 py-6 sm:grid-cols-[48px_1fr_24px] sm:gap-x-5 sm:px-8">
+            <span class="grid h-12 w-12 place-items-center rounded-[10px] bg-fuchsia-100 text-fuchsia-600">
+              <i data-lucide="bar-chart-3" class="h-6 w-6" aria-hidden="true"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-[17px] font-semibold leading-6 tracking-[-.015em] sm:text-xl">Unified Tracking &amp; Analytics</span>
+              <span class="mt-3 block text-sm leading-6 text-slate-500 sm:text-base">All your data in one dashboard — no more spreadsheet hell</span>
+            </span>
+            <i data-lucide="chevron-down" class="h-5 w-5 text-slate-400 transition-transform duration-300 group-open:rotate-180" aria-hidden="true"></i>
+          </summary>
+          <div class="border-t border-slate-100 px-6 pb-7 pt-5 text-sm leading-6 text-slate-500 sm:pl-[100px] sm:pr-16">
+            Monitor every channel, conversion, and payout from a single reporting view.
+          </div>
+        </details>
+
+        <details class="group overflow-hidden rounded-[18px] border border-[#dededb] bg-white transition duration-300 open:shadow-[0_12px_30px_rgba(15,23,42,.07)] hover:border-slate-300 hover:shadow-[0_10px_24px_rgba(15,23,42,.05)]">
+          <summary class="grid min-h-[132px] cursor-pointer list-none grid-cols-[48px_1fr_20px] items-center gap-x-4 px-6 py-6 sm:grid-cols-[48px_1fr_24px] sm:gap-x-5 sm:px-8">
+            <span class="grid h-12 w-12 place-items-center rounded-[10px] bg-pink-100 text-pink-500">
+              <i data-lucide="clipboard-check" class="h-6 w-6" aria-hidden="true"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-[17px] font-semibold leading-6 tracking-[-.015em] sm:text-xl">Compliance &amp; Risk Management</span>
+              <span class="mt-3 block text-sm leading-6 text-slate-500 sm:text-base">Stay compliant across all programs automatically</span>
+            </span>
+            <i data-lucide="chevron-down" class="h-5 w-5 text-slate-400 transition-transform duration-300 group-open:rotate-180" aria-hidden="true"></i>
+          </summary>
+          <div class="border-t border-slate-100 px-6 pb-7 pt-5 text-sm leading-6 text-slate-500 sm:pl-[100px] sm:pr-16">
+            Automated checks help keep campaigns aligned with each program’s requirements.
+          </div>
+        </details>
+
+        <details class="group overflow-hidden rounded-[18px] border border-[#dededb] bg-white transition duration-300 open:shadow-[0_12px_30px_rgba(15,23,42,.07)] hover:border-slate-300 hover:shadow-[0_10px_24px_rgba(15,23,42,.05)]">
+          <summary class="grid min-h-[132px] cursor-pointer list-none grid-cols-[48px_1fr_20px] items-center gap-x-4 px-6 py-6 sm:grid-cols-[48px_1fr_24px] sm:gap-x-5 sm:px-8">
+            <span class="grid h-12 w-12 place-items-center rounded-[10px] bg-emerald-100 text-emerald-600">
+              <i data-lucide="headphones" class="h-6 w-6" aria-hidden="true"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-[17px] font-semibold leading-6 tracking-[-.015em] sm:text-xl">White-Glove Support</span>
+              <span class="mt-3 block text-sm leading-6 text-slate-500 sm:text-base">Real affiliate experts, not outsourced support agents</span>
+            </span>
+            <i data-lucide="chevron-down" class="h-5 w-5 text-slate-400 transition-transform duration-300 group-open:rotate-180" aria-hidden="true"></i>
+          </summary>
+          <div class="border-t border-slate-100 px-6 pb-7 pt-5 text-sm leading-6 text-slate-500 sm:pl-[100px] sm:pr-16">
+            Work directly with specialists who understand your goals, market, and operation.
+          </div>
+        </details>
+
+        <details class="group overflow-hidden rounded-[18px] border border-[#dededb] bg-white transition duration-300 open:shadow-[0_12px_30px_rgba(15,23,42,.07)] hover:border-slate-300 hover:shadow-[0_10px_24px_rgba(15,23,42,.05)]">
+          <summary class="grid min-h-[132px] cursor-pointer list-none grid-cols-[48px_1fr_20px] items-center gap-x-4 px-6 py-6 sm:grid-cols-[48px_1fr_24px] sm:gap-x-5 sm:px-8">
+            <span class="grid h-12 w-12 place-items-center rounded-[10px] bg-purple-100 text-purple-600">
+              <i data-lucide="sparkles" class="h-6 w-6" aria-hidden="true"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-[17px] font-semibold leading-6 tracking-[-.015em] sm:text-xl">Instant Program Approvals</span>
+              <span class="mt-3 block text-sm leading-6 text-slate-500 sm:text-base">Skip the wait — get instant approval</span>
+            </span>
+            <i data-lucide="chevron-down" class="h-5 w-5 text-slate-400 transition-transform duration-300 group-open:rotate-180" aria-hidden="true"></i>
+          </summary>
+          <div class="border-t border-slate-100 px-6 pb-7 pt-5 text-sm leading-6 text-slate-500 sm:pl-[100px] sm:pr-16">
+            Launch faster with streamlined onboarding and pre-approved program access.
+          </div>
+        </details>
+
+        <details class="group overflow-hidden rounded-[18px] border border-[#dededb] bg-white transition duration-300 open:shadow-[0_12px_30px_rgba(15,23,42,.07)] hover:border-slate-300 hover:shadow-[0_10px_24px_rgba(15,23,42,.05)]">
+          <summary class="grid min-h-[132px] cursor-pointer list-none grid-cols-[48px_1fr_20px] items-center gap-x-4 px-6 py-6 sm:grid-cols-[48px_1fr_24px] sm:gap-x-5 sm:px-8">
+            <span class="grid h-12 w-12 place-items-center rounded-[10px] bg-yellow-100 text-yellow-600">
+              <i data-lucide="target" class="h-6 w-6" aria-hidden="true"></i>
+            </span>
+            <span class="min-w-0">
+              <span class="block text-[17px] font-semibold leading-6 tracking-[-.015em] sm:text-xl">Deep Audience Insights</span>
+              <span class="mt-3 block text-sm leading-6 text-slate-500 sm:text-base">Know your audience better than they know themselves</span>
+            </span>
+            <i data-lucide="chevron-down" class="h-5 w-5 text-slate-400 transition-transform duration-300 group-open:rotate-180" aria-hidden="true"></i>
+          </summary>
+          <div class="border-t border-slate-100 px-6 pb-7 pt-5 text-sm leading-6 text-slate-500 sm:pl-[100px] sm:pr-16">
+            Use clear behavioral and performance insights to make smarter growth decisions.
+          </div>
+        </details>
         </div>
       </div>
     </section>
@@ -459,7 +531,12 @@
     </div>
   </footer>
 
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+
     const menuButton = document.getElementById("menuButton");
     const mobileMenu = document.getElementById("mobileMenu");
 
